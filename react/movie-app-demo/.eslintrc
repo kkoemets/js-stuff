@@ -11,9 +11,27 @@
     "prettier"
   ],
   "rules": {
-    "react/state-in-constructor": [2, "never"],
-    "quotes": [2, "single", { "avoidEscape": true }],
+    "react/prop-types": 0,
+    "react/state-in-constructor": [
+      2,
+      "never"
+    ],
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
     "semi": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
   }
 }
