@@ -15,7 +15,7 @@ export class TasksService {
     }
 
     getTaskById(id: string): Task {
-        const task = this._getAllTasks().find((task: Task) => task.id === id);
+        const task: Task = this._getAllTasks().find((task: Task) => task.id === id);
 
         if (!task) {
             throw new NotFoundException(`Task with id-${id} not found`)
@@ -37,15 +37,15 @@ export class TasksService {
     }
 
     deleteTask(id: string) {
-        const taskToDelete = this.getTaskById(id);
+        const taskToDelete: Task = this.getTaskById(id);
         this._saveTasks(this._getAllTasks().filter((task: Task) => task.id !== taskToDelete.id));
     }
 
     updateTaskStatusById(id: string, status: TaskStatus): Task {
-        const taskToUpdate = this.getTaskById(id);
+        const taskToUpdate: Task = this.getTaskById(id);
         this.deleteTask(id);
 
-        const updatedTask = {...taskToUpdate, status};
+        const updatedTask: Task = {...taskToUpdate, status};
         this._saveTask(updatedTask);
 
         return updatedTask;
