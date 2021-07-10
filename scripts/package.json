@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "main": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +21,8 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "cheerio": "^1.0.0-rc.10",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1"
   }
 }

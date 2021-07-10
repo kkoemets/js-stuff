@@ -1,4 +1,4 @@
-const _ = require('lodash')
+import * as _ from 'lodash'
 
 const arr = [7, 4, 1, 5, 9, 2, 1, 4]
 
@@ -18,7 +18,7 @@ const quicksort = (currentArr) => {
         ...currentArr.slice(pivotIndex + 1),
     ])
         .groupBy((val) =>
-            val > pivot.value ? 'higherThanPivot' : 'lowerThanPivot'
+            val > pivot.value ? 'higherThanPivot' : 'lowerThanPivot',
         )
         .value()
 

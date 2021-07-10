@@ -1,1 +1,1 @@
-require('./quicksort/qs')
+import './dotabuff/dotabuff.js'
